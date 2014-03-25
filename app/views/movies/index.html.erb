@@ -35,15 +35,23 @@
   </div>
 
   <div class="col-sm-6 movie-display" >
-    <h3 class='text-center'>Go See:</h3>
-    
+    <h2 class='text-center'>Go See:</h2>
+    <br>
+    <div class="text-center" >
+      <%= image_tag  @movies[@id]["posters"]["detailed"]%>
+      <br>
+      <h3> <%= @movies[@id]["title"] %></h3>
+      <p> <%= @movies[@id]["synopsis"].truncate(500) %></p>
+      <%# binding.pry %>
+    </div>
+    <%= link_to "Gimme another one", next_movie_path %>
   </div>
  </div>
 
 <%= link_to 'Back', root_path %>
 
 <script>
- 
+
 
 </script>
 

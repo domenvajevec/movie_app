@@ -36,7 +36,10 @@
 
   <div class="col-sm-6 movie-display" >
     <h3 class='text-center'>Go See:</h3>
-    
+      <%= image_tag  @movies[@id]["posters"]["detailed"]%>
+      <br>
+      <h3> <%= @movies[@id]["title"] %></h3>
+      <p> <%= @movies[@id]["synopsis"].truncate(500) %></p>
   </div>
  </div>
 
