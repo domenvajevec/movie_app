@@ -36,3 +36,4 @@ end
 gem 'httparty'
 gem 'pry'
 gem 'd3-rails'
+gem 'bootstrap-sass'
