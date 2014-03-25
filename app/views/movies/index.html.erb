@@ -1,2 +1,48 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1 class="text-center">Listing movies</h1>
+<%# binding.pry %>
+<div class="row">
+  <div class="col-sm-6">
+    <table>
+      <th>
+          <td>Movie</td>
+          <td colspan="2">Critics Score</td>
+          <td colspan="2">Audience Score</td>
+     </th>
+
+      <% @movies.each do | movie | %>
+        <tr class="movieList">
+          <td> <%= image_tag movie["posters"]["thumbnail"]%></td>
+          <td> <%= movie["title"] %>           </td>
+          <td class="critics_rating">
+             <%  if movie["ratings"]["critics_rating"] == "Rotten" %>
+               <%= raw(@rotten) %>
+               <% elsif  movie["ratings"]["critics_rating"] == "Certified Fresh"%>
+               <%= raw(@fresh) %>
+             <% end %>   
+          </td>
+          <td class="score"> <%= movie["ratings"]["critics_score"] %>  </td>
+          <td> <%= movie["ratings"]["audience_score"] %> </td>
+          <td class="audience_rating"> 
+            <%  if movie["ratings"]["audience_rating"] == "Spilled" %>
+               <%= raw(@rotten) %>
+            <% elsif  movie["ratings"]["audience_rating"] == "Upright"%>
+               <%= raw(@fresh) %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <div class="col-sm-6 movie-display" >
+    <h3 class='text-center'>Go See:</h3>
+    
+  </div>
+ </div>
+
+
+<script>
+ 
+
+</script>
+
