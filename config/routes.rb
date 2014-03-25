@@ -1,6 +1,6 @@
 MovieApp::Application.routes.draw do
-  get "dvds/index"
-  get "movies/index"
+  get "dvds/" => 'dvds#index'
+  get "movies/" => 'movies#index'
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
