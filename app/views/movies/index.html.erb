@@ -1,12 +1,12 @@
-<h2 class="text-center">Listing the Latest Movies</h2>
+<h2 class="text-center">The Latest Movies</h2>
 <%# binding.pry %>
 <div class="row">
   <div class="col-sm-6">
-    <table>
-      <th>
-          <td>Movie</td>
-          <td colspan="2">Critics Score</td>
-          <td colspan="2">Audience Score</td>
+    <table class="table table-striped">
+      <th class="table-header">
+          <td><strong>Movie</strong></td>
+          <td colspan="2"><strong>Critics Score</strong></td>
+          <td colspan="2"><strong>Audience Score</strong></td>
      </th>
 
       <% @movies.each do | movie | %>
@@ -34,10 +34,10 @@
     </table>
   </div>
 
-  <div class="col-sm-6 movie-display" >
-    <h2 class='text-center'>Go See:</h2>
+  <div class="col-sm-6" >
+    <h3 class='text-center'>Go See:</h3>
     <br>
-    <div class="text-center" >
+    <div class="text-center movie-display" >
       <%= image_tag  @movies[@id]["posters"]["detailed"]%>
       <br>
       <h3> <%= @movies[@id]["title"] %></h3>
@@ -48,7 +48,6 @@
   </div>
  </div>
 
-<%= link_to 'Back', root_path %>
 
 <script>
 

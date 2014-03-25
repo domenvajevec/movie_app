@@ -13,4 +13,7 @@ class MoviesController < ApplicationController
     redirect_to movies_path
    end
  
+  def show
+    movie_number = params[:id]
+  end
 end

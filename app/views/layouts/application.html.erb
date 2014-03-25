@@ -7,6 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default" role="navigation">
+  <ul class="nav navbar-nav"> 
+    <li> <%= link_to "Home", root_path %> </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to "Movies", movies_path %></li>
+    <li><%= link_to "DVDs", dvds_path %></li>
+  </ul>
+  </nav>
+
   <div class="container-fluid">
     <%= yield %>
   </div>
