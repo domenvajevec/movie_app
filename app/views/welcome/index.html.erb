@@ -1,4 +1,11 @@
-<h1>Welcome#index</h1>
-<%= link_to "Show me the movies!", movies_path %>
-<%= link_to "Show me what DVD to rent", dvds_path %>
-
+<div class="bg-main">
+<div>
+   <div class="text-center">
+    <h1 class="main-title">WHAT DO I WATCH MACHINE </h1>
+      <div class="button_row">
+      <%= link_to "Show me the movies!", movies_path, {class: "btn btn-primary btn-lg main-btn" } %>
+      <%= link_to "Show me what DVD to rent!", dvds_path, {class: "btn btn-primary btn-lg main-btn"} %>
+    </div>
+  </div>
+</div>
+</div>

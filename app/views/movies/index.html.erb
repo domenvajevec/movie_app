@@ -1,5 +1,6 @@
-<h2 class="text-center">The Latest Movies</h2>
+<h2 class="text-center main-title">THE LATEST MOVIES</h2>
 <%# binding.pry %>
+<br>
 <div class="row">
   <div class="col-sm-6">
     <table class="table table-striped">
@@ -13,6 +14,7 @@
         <tr class="movieList">
           <td> <%= image_tag movie["posters"]["thumbnail"]%></td>
           <td> <%= movie["title"] %>           </td>
+          <td class="score"> <%= movie["ratings"]["critics_score"] %>  </td>
           <td class="critics_rating">
              <%  if movie["ratings"]["critics_rating"] == "Rotten" %>
                <%= raw(@rotten) %>
@@ -20,7 +22,6 @@
                <%= raw(@fresh) %>
              <% end %>   
           </td>
-          <td class="score"> <%= movie["ratings"]["critics_score"] %>  </td>
           <td> <%= movie["ratings"]["audience_score"] %> </td>
           <td class="audience_rating"> 
             <%  if movie["ratings"]["audience_rating"] == "Spilled" %>
@@ -34,8 +35,8 @@
     </table>
   </div>
 
-  <div class="col-sm-6" >
-    <h3 class='text-center'>Go See:</h3>
+  <div class="col-sm-6 text-center movie-list" >
+    <h3>Go See:</h3>
     <br>
     <div class="text-center movie-display" >
       <%= image_tag  @movies[@id]["posters"]["detailed"]%>
@@ -44,7 +45,7 @@
       <p> <%= @movies[@id]["synopsis"].truncate(500) %></p>
       <%# binding.pry %>
     </div>
-    <%= link_to "Gimme another one", next_movie_path %>
+    <%= link_to "Gimme another one", next_movie_path, {class: "btn btn-primary"}%>
   </div>
  </div>
 
