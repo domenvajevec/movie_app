@@ -39,13 +39,17 @@ body {
   background: rgba(230,230,230,0.15);
   border: 1px solid rgba(30,30,30,0.03);
   border-radius: 2px;
+  padding-bottom: 5px;
 }
 img {
   box-shadow: 0 0 8px gray;
 }
 .movie-display img {
-  box-shadow: 0 0 1.5em gray;
+  box-shadow: 2px 2px 2.5em gray;
   // opacity: 0;
+}
+.glyphicon-thumbs-up {
+  //text-shadow: 2px 2px 2px green;
 }
 
 

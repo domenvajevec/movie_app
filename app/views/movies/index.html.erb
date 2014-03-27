@@ -9,8 +9,8 @@
           <td colspan="2"><strong>Audience Score</strong></td>
      </th>
 
-      <% @movies.each do | movie | %>
-        <tr class="movieList">
+      <% @movies.each_with_index do | movie, index | %>
+        <tr class="movieList" id="<%=index%>">
           <td> <%= image_tag movie["posters"]["thumbnail"]%></td>
           <td> <%= movie["title"] %>           </td>
           <td class="score"> <%= movie["ratings"]["critics_score"] %>  </td>
@@ -46,20 +46,20 @@
       <p><strong>Critics Consensus: </strong> <%= @movies[@id]["critics_consensus"] %></p>
       <p><strong> Critics Score: <%= @movies[@id]["ratings"]["critics_score"] %> &nbsp;
           Audience Score: <%= @movies[@id]["ratings"]["audience_score"] %></strong></p>
-      <%# binding.pry %>
     </div>
     <%= link_to "Gimme another one!", movies_path, {class: "btn btn-primary"}%>
   </div>
  </div>
 
-
 <script>
+
 $(document).ready(function(){
   $('.movie-list').ready(function(){
-    $('.movie-list').animate({opacity:1}, 1000, function(){
+    $('.movie-list').animate({opacity:1}, 1500, function(){
     });
   });
 });
+
 
 </script>
 
