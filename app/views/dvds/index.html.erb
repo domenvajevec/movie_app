@@ -1,7 +1,7 @@
 <h2 class="text-center">Listing the Latest DVD's</h2>
 <br>
 <div class="row-fluid">
-  <div class="col-sm-6">
+  <div class="col-sm-6 listings">
     <table class="table table-striped">
       <th class="table-header">
           <td><strong>Movie</strong></td>
@@ -44,7 +44,7 @@
       <h3> <%= @dvds[@id]["title"] %></h3>
       <p> <%= @dvds[@id]["synopsis"].truncate(500) %></p>
     </div>
-    <%= link_to "Gimme another one", next_movie_path, {class: "btn btn-primary"}%>
+    <%= link_to "Gimme another one", dvds_path, {class: "btn btn-primary"}%>
   </div>
  </div>
 

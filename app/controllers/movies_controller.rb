@@ -5,12 +5,6 @@ class MoviesController < ApplicationController
     movie_list = JSON.parse(Movie.party)
     @movies = movie_list["movies"].sort_by {|movie| movie["ratings"]["critics_score"]}.reverse
   end
-
-   def next
-   
-    @id += 1
-    redirect_to movies_path
-   end
  
   def show
     movie_number = params[:id]

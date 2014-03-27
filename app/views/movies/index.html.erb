@@ -45,7 +45,7 @@
       <p> <%= @movies[@id]["synopsis"].truncate(500) %></p>
       <%# binding.pry %>
     </div>
-    <%= link_to "Gimme another one", next_movie_path, {class: "btn btn-primary"}%>
+    <%= link_to "Gimme another one", movies_path, {class: "btn btn-primary"}%>
   </div>
  </div>
 
