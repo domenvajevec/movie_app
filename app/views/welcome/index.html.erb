@@ -1,11 +1,17 @@
 <div class="bg-main">
-<div>
-   <div class="text-center">
-    <h1 class="main-title">WHAT DO I WATCH MACHINE </h1>
-      <div class="button_row">
-      <%= link_to "Show me the movies!", movies_path, {class: "btn btn-primary btn-lg main-btn" } %>
-      <%= link_to "Show me what DVD to rent!", dvds_path, {class: "btn btn-primary btn-lg main-btn"} %>
+
+   <div class="row text-center">
+     <h1 class="main-title jumbo col-sm-12">WHAT DO I WATCH MACHINE </h1>
+   </div>
+
+    <div class="button_row row-fluid">
+    <%= link_to "Find me a movie!", movies_path, {class: "btn btn-primary btn-lg main-btn col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1" } %>
     </div>
-  </div>
+      <br>
+
+    <div class="button_row row-fluid">
+    <%= link_to "Show me what DVD to rent!", dvds_path, {class: "btn btn-primary btn-lg main-btn col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1"} %>
+    </div>
+
 </div>
-</div>
+

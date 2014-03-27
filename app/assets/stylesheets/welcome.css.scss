@@ -2,7 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .bg-main {
-  height:600px;
+  height:800px;
   background: url('movies.jpg') no-repeat;
   background-size: cover;
+}
+.jumbo {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  font-size: 4em;
+}
+.main-btn {
+  // width: 25%;
+}
+.button_row {
+  padding-top: 10px;
 }
