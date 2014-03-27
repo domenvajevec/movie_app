@@ -2,18 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .bg-main {
-  height:800px;
-  background: url('movies.jpg') no-repeat;
+  background: url('movies.jpg') no-repeat center center fixed;
   background-size: cover;
+  height:829px;
 }
+
 .jumbo {
   padding-top: 150px;
   padding-bottom: 50px;
   font-size: 4em;
 }
-.main-btn {
-  // width: 25%;
-}
+
 .button_row {
   padding-top: 10px;
+}
+.main-copy {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em gray, 0 0 0.2em blue;
+  text-transform: uppercase;
+  padding-top: 20px;
+  //padding-bottom: 500px;
+}
+
+.jumbo {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 1em gray, 0 0 0.2em blue;
+  color: white;
+}
+.main-btn{
+  margin-top: 5px;
+  text-shadow: 1px 1px black;
 }
