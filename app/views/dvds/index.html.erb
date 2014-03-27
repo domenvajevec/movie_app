@@ -1,4 +1,4 @@
-<h2 class="text-center">Listing the Latest DVD's</h2>
+<h2 class="text-center title">The Latest DVD's</h2>
 <br>
 <div class="row-fluid">
   <div class="col-sm-6 listings">
@@ -8,7 +8,6 @@
           <td colspan="2"><strong>Critics Score</strong></td>
           <td colspan="2"><strong>Audience Score</strong></td>
      </th>
-
 
       <% @dvds.each do | movie | %>
         <tr class="movieList">
@@ -41,10 +40,14 @@
     <div class="text-center movie-display" >
       <%= image_tag  @dvds[@id]["posters"]["detailed"]%>
       <br>
-      <h3> <%= @dvds[@id]["title"] %></h3>
-      <p> <%= @dvds[@id]["synopsis"].truncate(500) %></p>
+      <h3><%= @dvds[@id]["title"] %></h3>
+      <p><%= @dvds[@id]["synopsis"].truncate(500) %></p>
+      <br>
+      <p><strong>Critics Consensus: </strong> <%= @dvds[@id]["critics_consensus"] %></p>
+      <p><strong>Critics Score: <%= @dvds[@id]["ratings"]["critics_score"] %> &nbsp;
+          Audience Score: <%= @dvds[@id]["ratings"]["audience_score"] %></strong></p>
     </div>
-    <%= link_to "Gimme another one", dvds_path, {class: "btn btn-primary"}%>
+    <%= link_to "Gimme another one!", dvds_path, {class: "btn btn-primary"}%>
   </div>
  </div>
 

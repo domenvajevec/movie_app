@@ -1,5 +1,4 @@
-<h2 class="text-center main-title">THE LATEST MOVIES</h2>
-<%# binding.pry %>
+<h2 class="text-center title">The Latest Movies</h2>
 <br>
 <div class="row-fluid">
   <div class="col-sm-6">
@@ -43,9 +42,13 @@
       <br>
       <h3> <%= @movies[@id]["title"] %></h3>
       <p> <%= @movies[@id]["synopsis"].truncate(500) %></p>
+      <br>
+      <p><strong>Critics Consensus: </strong> <%= @movies[@id]["critics_consensus"] %></p>
+      <p><strong> Critics Score: <%= @movies[@id]["ratings"]["critics_score"] %> &nbsp;
+          Audience Score: <%= @movies[@id]["ratings"]["audience_score"] %></strong></p>
       <%# binding.pry %>
     </div>
-    <%= link_to "Gimme another one", movies_path, {class: "btn btn-primary"}%>
+    <%= link_to "Gimme another one!", movies_path, {class: "btn btn-primary"}%>
   </div>
  </div>
 
